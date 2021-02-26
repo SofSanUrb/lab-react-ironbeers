@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbarBeers{
+  height: 80px;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+}
+.navbarBeers img{
+  margin-top: 10px;
+  height: 60px;
+}
+
+.beerlistImg {
+  height: 200px;
+}
+.singlebeer{
+  margin: 20px 0px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid grey;
+  align-items: baseline;
+}
+.beerInfo{
+  text-align: left;
+}
+.text-grey {
+  color:grey;
+}
+
