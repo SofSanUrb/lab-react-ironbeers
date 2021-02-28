@@ -53,10 +53,20 @@ function App(props) {
   }
 
   const handleSearch = (event) => {
-    let filteredBeers = beers.filter(beer => {
-      return beer.name.toLowerCase().includes(event.target.value.toLowerCase())
+    let query = event.target.value.toLowerCase()
+
+    //Option 1
+    // let filteredBeers = beers.filter(beer => {
+    //   return beer.name.toLowerCase().includes(event.target.value.toLowerCase())
+    // })
+    // setFilterBeers(filteredBeers)
+
+    //Option 2 
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+    .then((response) => {
+        setFilterBeers(response.data)
     })
-    setFilterBeers(filteredBeers)
+    .catch(() => console.log("error searching"))
   }
 
   return (
